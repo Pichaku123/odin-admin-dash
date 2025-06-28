@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 3fr; 
+    grid-template-rows: 1fr 4fr;
+}
+
+.sidebar{
+    border: 2px solid black;
+    grid-row: 1 / span 4;
+}
+
+.main-content{
+    border: 2px solid black;
+    grid-column: 2/ span 3;
+}
+
+.header{
+    border: 2px solid black;
+}
