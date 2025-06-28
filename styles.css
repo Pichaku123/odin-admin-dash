@@ -5,6 +5,15 @@
     font-family: "Roboto";
 }
 
+ul{
+    list-style-type: none;
+}
+
+svg{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     display: grid;
     height: 100vh;
@@ -15,6 +24,31 @@ body{
 .sidebar{
     border: 2px solid black;
     grid-row: 1 / span 4;
+    display:flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.sidebar .logo p{
+    font-size: 2em;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.sidebar .menu > ul, .sidebar .extra > ul{
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.sidebar li{
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    gap: 5%;
 }
 
 .main-content{
@@ -24,4 +58,120 @@ body{
 
 .header{
     border: 2px solid black;
+    display: flex;
+    flex-direction: column;
 }
+
+.header .top{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    justify-content: space-evenly;
+}
+
+.header .search{
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+#searchbar{
+    height: 2em;
+}
+
+.header .account{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border: 2px solid black;
+    flex-grow: 1;
+    gap: 5%;
+}
+
+.header .bot{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.header .bot .name{
+    flex: 1.5;
+    display: flex;
+    gap: 5%;
+    border: 2px solid black;
+}
+
+.header .bot .actions{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-content{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#projects{
+    grid-row: 1/3;
+    border: 2px solid red;
+    padding: 1em 2em;
+}
+
+#announce{
+    border: 2px solid red;
+}
+
+#trending{
+    border: 2px solid red;
+}
+
+.project-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5%;
+}
+
+.main-content .project{
+    border: 2px solid blue;
+    min-height: 200px;
+}
+
+
+#announce-card{
+    padding: 5%;
+    border: 2px solid gray;
+}
+
+#announce-card > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.announce-text{
+    border-bottom: 2px solid lightgrey;
+}
+
+#pfp{
+    height: 2em;
+    width: 2em;
+}
+
+#trending-card{
+    border: 2px solid gray;
+}
+
+
+#trending .trending-text{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+
