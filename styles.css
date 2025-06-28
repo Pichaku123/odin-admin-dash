@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto";
+    background-color: white;
 }
 
 ul{
@@ -22,22 +23,42 @@ body{
 }
 
 .sidebar{
-    border: 2px solid black;
+    padding: 1rem 1rem;
+    background-color: #1992d4;
+    color: white;
     grid-row: 1 / span 4;
     display:flex;
     flex-direction: column;
-    gap: 5%;
+    gap: 3rem;
 }
 
-.sidebar .logo p{
-    font-size: 2em;
-    border: 2px solid black;
+.sidebar svg{
+
+    background: transparent;
+    filter: invert(1);
+}
+
+.sidebar .logo {
+    background-color: #1992d4;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
-    gap: 5%;
+    gap: 1rem;
+}
+
+.logo svg{
+    width: 3rem;
+    height: 3rem;
+}
+
+.sidebar .logo span{
+    color: white;
+    background-color: #1992d4;
+    font-size: 2rem;
 }
 
 .sidebar .menu > ul, .sidebar .extra > ul{
+    background-color: #1992d4;
     font-size: 1.2em;
     display: flex;
     flex-direction: column;
@@ -45,10 +66,11 @@ body{
 }
 
 .sidebar li{
-    border: 2px solid black;
+    background-color: #1992d4;
     display: flex;
     align-items: center;
-    gap: 5%;
+    gap: 1.6rem;
+    padding: 0 1rem;
 }
 
 .main-content{
@@ -57,7 +79,6 @@ body{
 }
 
 .header{
-    border: 2px solid black;
     display: flex;
     flex-direction: column;
 }
@@ -66,8 +87,12 @@ body{
     flex: 1;
     display: flex;
     align-items: center;
-    border: 2px solid black;
     justify-content: space-evenly;
+    font-weight: 800;
+    font-size: 1.5em;
+    padding-top: 0.1rem;
+    padding-left: 2rem;
+    padding-right: 5rem;
 }
 
 .header .search{
@@ -79,13 +104,16 @@ body{
 
 #searchbar{
     height: 2em;
+    width: 100%;
+    padding-left: 1em;
+    border: 2px solid gray;
+    border-radius: 2em;
 }
 
 .header .account{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    border: 2px solid black;
     flex-grow: 1;
     gap: 5%;
 }
@@ -94,14 +122,28 @@ body{
     flex: 1;
     display: flex;
     align-items: center;
-    border: 2px solid black;
+    padding-left: 2rem;
+    padding-bottom: 0.4rem;
+}
+
+#pfp-display{
+    height: 8em;
+    width: 8em;
+    background: transparent;
 }
 
 .header .bot .name{
     flex: 1.5;
     display: flex;
+    align-items: center;
     gap: 5%;
-    border: 2px solid black;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.header .bot .name .username{
+    font-size: 2em;
+    font-weight: 800;
 }
 
 .header .bot .actions{
@@ -109,6 +151,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.actions > button{
+    font-size: 1.2em;
+    padding: 0.5em 1.5em;
+    border-radius: 1em;
+    border: none;
+    background-color: #1992d4;
+    color: white;
 }
 
 .main-content{
@@ -120,7 +171,13 @@ body{
 #projects{
     grid-row: 1/3;
     border: 2px solid red;
-    padding: 1em 2em;
+    padding: 2em 2em;
+    background-color: #dce4e8;
+}
+
+#projects > h3{
+    margin-bottom: 0.5em;
+    background-color: #dce4e8;
 }
 
 #announce{
@@ -135,13 +192,36 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 5%;
+    align-items: stretch;
+    background-color: #dce4e8;
 }
 
 .main-content .project{
-    border: 2px solid blue;
     min-height: 200px;
+    overflow: auto;
+    border-radius: 0.8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 6px 0px 0px 0px orange inset;
 }
 
+.card-content p{
+    color: gray;
+}
+
+.project .logos{
+    align-self: flex-end;
+}
+
+.project .logos svg{
+    width: 2em;
+    height: 2em;
+}
 
 #announce-card{
     padding: 5%;
