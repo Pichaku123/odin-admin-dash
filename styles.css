@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: "Roboto";
     background-color: white;
+    font-size: 12px;
 }
 
 ul{
@@ -19,11 +20,11 @@ body{
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 3fr; 
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
 }
 
 .sidebar{
-    padding: 1rem 1rem;
+    padding: 2rem 1rem;
     background-color: #1992d4;
     color: white;
     grid-row: 1 / span 4;
@@ -54,7 +55,7 @@ body{
 .sidebar .logo span{
     color: white;
     background-color: #1992d4;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .sidebar .menu > ul, .sidebar .extra > ul{
@@ -69,12 +70,16 @@ body{
     background-color: #1992d4;
     display: flex;
     align-items: center;
+    font-size: 1.5rem;
     gap: 1.6rem;
     padding: 0 1rem;
 }
 
+.sidebar li svg{
+    margin-right: 0.3rem;
+}
+
 .main-content{
-    border: 2px solid black;
     grid-column: 2/ span 3;
 }
 
@@ -86,11 +91,11 @@ body{
 .header .top{
     flex: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
     font-weight: 800;
     font-size: 1.5em;
-    padding-top: 0.1rem;
+    padding-top: 2rem;
     padding-left: 2rem;
     padding-right: 5rem;
 }
@@ -122,13 +127,14 @@ body{
     flex: 1;
     display: flex;
     align-items: center;
+    padding-top: 1em;
     padding-left: 2rem;
     padding-bottom: 0.4rem;
 }
 
 #pfp-display{
-    height: 8em;
-    width: 8em;
+    height: 5em;
+    width: 5em;
     background: transparent;
 }
 
@@ -170,35 +176,29 @@ body{
 
 #projects{
     grid-row: 1/3;
-    border: 2px solid red;
-    padding: 2em 2em;
+    padding: 1em 2em;
     background-color: #dce4e8;
 }
 
 #projects > h3{
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em;
     background-color: #dce4e8;
-}
-
-#announce{
-    border: 2px solid red;
-}
-
-#trending{
-    border: 2px solid red;
+    font-size: 1.5em;
+    margin-bottom: 1%;
 }
 
 .project-wrapper{
     display: grid;
+    height: 95%;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 5%;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 2em;
     align-items: stretch;
     background-color: #dce4e8;
 }
 
 .main-content .project{
-    min-height: 200px;
-    overflow: auto;
     border-radius: 0.8em;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -210,8 +210,14 @@ body{
     box-shadow: 6px 0px 0px 0px orange inset;
 }
 
+.card-content h2{
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
+}
+
 .card-content p{
     color: gray;
+    font-size: 1em;
 }
 
 .project .logos{
@@ -223,9 +229,22 @@ body{
     height: 2em;
 }
 
+#announce{
+    padding-top: 1rem;
+    padding-bottom: 0;
+    background-color: #dce4e8;
+}
+
+#announce > h3{
+    font-size: 1.5em;
+    background-color: #dce4e8;
+    margin-bottom: 2%;
+}
+
 #announce-card{
     padding: 5%;
-    border: 2px solid gray;
+    box-shadow: 2px 2px 2px 1px #949494;
+    border-radius: 1em;
 }
 
 #announce-card > ul{
@@ -238,20 +257,62 @@ body{
     border-bottom: 2px solid lightgrey;
 }
 
-#pfp{
-    height: 2em;
-    width: 2em;
+.announce-text p{
+    font-size: 0.9em;
+}
+
+#trending{
+    padding-top: 1rem;
+    background-color: #dce4e8;
+}
+
+#trending h3{
+    font-size: 1.5em;
+    background-color: #dce4e8;
+    margin-bottom: 2%;
 }
 
 #trending-card{
-    border: 2px solid gray;
+    padding: 2.5% 5%;
+    height: 80%;
+    box-shadow: 2px 2px 2px 1px #949494;
+    border-radius: 1em;
 }
 
+#trending-card > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
 
 #trending .trending-text{
     display: flex;
     align-items: center;
     gap: 5%;
 }
+
+
+
+.trending-text .uid{
+    font-size: 1.2em;
+    margin-bottom: 3%;
+    font-weight: 500;
+}
+
+.trending-text .bio{
+    font-size: 0.8em;
+    color: gray;
+}
+
+#pfp{
+    height: 3em;
+    width: 3em;
+}
+
+.right{
+    padding-right: 10%;
+}
+
+
 
 
